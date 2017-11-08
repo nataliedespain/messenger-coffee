@@ -1,0 +1,21 @@
+{% if template == 'list-collections' %}
+	<div class="barbox is-index">
+	<div class="infobar">
+		<div class="infobar__content">
+
+	
+				<div class="barlist jsAllCollection">
+				{% for link in linklists['collection-page'].links %}
+					<a href="#{{link.object.handle}}" class="barlist__link {% if forloop.first %} active {% endif %}">{{link.title}}</a>
+				{% endfor %}
+				</div>
+				<!-- /.barlist -->
+		
+
+
+		</div>
+	</div>
+	<!-- /.infobar__inner -->
+</div>
+<!-- /.infobar -->
+	{% endif %}

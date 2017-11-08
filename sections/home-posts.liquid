@@ -1,0 +1,55 @@
+<div data-section-id="{{ section.id }}" data-section-type="blog">
+  <div class="home-posts">
+    <h3 class="home-posts__title">
+      {{section.settings.title}}
+    </h3>
+    <!-- /.home-posts__title -->
+    <div class="home-posts__content">
+      {% for article in blogs[section.settings.blog].articles  limit: 3 %}
+      <div class="home-posts__item">
+        <div class="home-post">
+          <h4 class="home-post__title"><a href="{{article.url}}" class="home-post__link">{{article.title}}</a></h4>
+          <!-- /.home-post__title -->
+          <div class="home-post__meta">
+            {{article.created_at | time_tag: '%d %b  %Y' }}
+          </div>
+          <!-- /.home-post__meta -->
+          <div class="home-post__desc">
+            {{article.excerpt_or_content | strip_html | strip  | strip_newlines | truncate: 200}}
+          </div>
+          <!-- /.home-post__desc -->
+          <a href="{{article.url}}" class="btn btn-dark home-post__btn">{{'blogs.article.read_more' | t }}</a>
+        </div>
+        <!-- /.home-post -->
+      </div>
+      <!-- /.-home-posts__item -->
+      {% endfor %}
+    </div>
+    <!-- /.home-posts__content -->
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Featured collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "From the blog"
+      },
+      {
+        "id": "blog",
+        "type": "blog",
+        "label": "Blog"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured posts",
+        "category": "Blog"
+      }
+    ]
+  }
+
+{% endschema %}

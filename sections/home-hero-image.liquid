@@ -1,0 +1,75 @@
+<div data-section-id="{{ section.id }}" data-section-type="image">
+  <div class="hero-image" id="heroImage">
+    {% for block in section.blocks %}
+    <div class="hero-image__media jsHero" id="jsHero_{{forloop.index}}">
+      {% assign img = block.settings.image %}
+      <picture>
+
+        <source media="(max-width: 768px)" srcset="{{img | img_url: '700x700', crop: 'center', format: 'pjpg'}} 1x,
+        {{img |  img_url: '700x700', crop: 'center', scale: 2, format: 'pjpg'}} 2x">
+
+        <source media="(min-width: 769px)" srcset="{{img | img_url: '1920x', format: 'pjpg'}} 1x,
+        {{img | img_url: '1920x', scale: 2, format: 'pjpg'}} 2x">
+
+
+
+        <img src="{{img | img_url: '1920x', format: 'pjpg'}}" alt="{{img.alt}}">
+
+      </picture>
+    </div>
+    <!-- /.hero-image__image -->
+    {% endfor %}
+    <div class="hero-image__info">
+      <h2 class="hero-image__desc">{{section.settings.description}}</h2>
+      <!-- /.hero-image__desc -->
+      <a href="{{section.settings.button_url}}" class="hero-image__link btn btn-large">{{section.settings.button_text}}</a>
+      <a href="#features-anchor" class="hero-image__link-arrow">
+        {% include 'icon-angle-down' %}
+      </a>
+    </div>
+    <!-- /.hero-image__info -->
+  </div>
+  <!-- /.hero-image -->
+</div>
+
+{% schema %}
+  {
+    "name": "Home hero",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Hero image description",
+        "default": "<p>Hero image description goes here</p>"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text",
+        "default": "Shop Coffee"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button url"
+      },
+      {
+        "type": "header",
+        "content": "Add images using blocks below"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "image",
+        "name": "Images",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

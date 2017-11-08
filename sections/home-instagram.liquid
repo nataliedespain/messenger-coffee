@@ -1,0 +1,37 @@
+<div data-section-id="{{ section.id }}" data-section-type="images">
+  <div class="instagram-feed">
+    <div id="instagram_{{section.id}}" class="fullwidth contentsCenter" style='margin-bottom: -5px'>
+      {{ 'instafeed.min.js' | asset_url | script_tag }}
+
+         <script type="text/javascript">
+             var userFeed_{{section.id}} = new Instafeed({
+                 get: 'user',
+                 userId: 748366179,
+                clientId: '6c6d6dbfeeb04f148497e411de0afec4',
+                 accessToken: '748366179.1677ed0.cb0420f2d9f14a199f65347171b3ceed',
+                 limit: 4,
+                 resolution: 'standard_resolution',
+                 template: '<a class="insta-item {% raw %} is-{{type}}{% endraw %}" href="{%raw%}{{link}}{%endraw%}"><img src="{%raw%}{{image}}{%endraw%}" /></a>'
+             });
+             userFeed_{{section.id}}.run();
+         </script>
+      </script>
+      <div id="instafeed"></div>
+    </div><!--#instagram-->
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Instagram",
+    "settings": [
+     
+    ],
+    "presets": [
+      {
+        "name": "Instagram Feed",
+        "category": "Images"
+      }
+    ]
+  }
+
+{% endschema %}

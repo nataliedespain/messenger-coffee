@@ -1,0 +1,43 @@
+<div class="text-block in-about">
+  <div class="text-block__inner page-width">
+    <div class="text-block__content">
+      <div class="text-block__desc">
+        {{section.settings.desc}}
+      </div>
+      <!-- /.text-block__text -->
+      <div class="text-block__media">
+        <img src="{{section.settings.image | img_url: '250x'}}" 
+        srcset="{{section.settings.image | img_url: '250x'}} 1x, {{section.settings.image | img_url: '250x', scale: 2}} 2x"
+        alt="{{section.settings.image.alt}}" class="text-block__img">
+      </div>
+      <!-- /.text-block__media -->
+    </div>
+    <!-- /.text-block__content -->
+  </div>
+  <!-- /.text-block__inner -->
+</div>
+<!-- /.text-block -->
+
+
+{% schema %}
+  {
+    "name": "Text block",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Text block"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Desc"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Artwork",
+        "info": "Image under text"
+      }
+    ]
+  }
+{% endschema %}

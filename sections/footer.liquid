@@ -1,0 +1,162 @@
+<footer class="site-footer">
+  <div class="page-width">
+
+  <div class="footer">
+    <div class="footer__box">
+      {% comment %}<h5 class="footer__box-title"></h5>{% endcomment %}
+      <div class="footer__box-content">
+
+        <div class="site-small-logo">
+          <img src="{{section.settings.small_logo | img_url: '100x' }}"
+            srcset="{{section.settings.small_logo | img_url: '100x'}} 1x, {{section.settings.small_logo | img_url: '100x', scale: 2}} 2x"
+           alt="{{shop.name}}" class="site-small-logo__img">
+        </div>
+        <!-- /.site-small-logo -->
+
+        <div class="site-copyright">
+         &copy; {{ 'now' | date: "%Y" }} {{ shop.name}}
+        </div>
+
+        {% if section.settings.show_payment_icons %}
+        <div class="site-payments">
+          <img src="{{section.settings.payment_icons | img_url: '250x'}}" 
+          srcset="{{section.settings.payment_icons | img_url: '250x'}} 1x, {{section.settings.payment_icons | img_url: '250x', scale: 2}} 2x"
+          alt="" class="site-payments__img">
+        </div>
+        <!-- /.site-payments -->
+        {% endif %}
+
+      </div>
+
+    </div>
+    <!-- /.footer__box -->
+    <div class="footer__box">
+      <h5 class="footer__box-title">{{section.settings.list_title}}</h5>
+      <div class="footer__box-content">
+        {%- assign footer_linklist = section.settings.footer_linklist -%}
+        {% if linklists[footer_linklist].links.size > 0 %}
+          <ul class="linklist">
+            {% for link in linklists[footer_linklist].links %}
+              <li class="linklist__item"><a href="{{ link.url }}" class="linklist__link">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+    <!-- /.footer__box -->
+    <div class="footer__box">
+      <h5 class="footer__box-title">{{section.settings.subscribe_title}}</h5>
+      <div class="form-box">
+        <div class="form-box__form-wrap">
+          <form action="" class="form-box__form">
+            <label for="subscribeForm" class="form-box__label">{{section.settings.subscribe_label}}</label>
+            <div class="form-box__input-group">
+              <input placeholder="{{'Your Email'}}" id="subscribeForm" type="email" class="form-box__input" required>
+              <button class="form-box__submit">
+                {% include 'icon-angle-right' %}
+              </button>
+            </div>
+            <!-- /.form-box__input-group -->
+          </form>
+          <!-- /.form-box__form -->
+        </div>
+        <!-- /.form-box__form-wrap -->
+      </div>
+      <!-- /.form-box -->
+      <div class="footer__box-content">
+        <div class="social-icons">
+          {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
+          <ul class="social-list">
+            {% for social in social_accounts %}
+              {%- assign social_handle = social | handleize -%}
+              {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+              {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+
+              {% if settings[social_link] != blank %}
+                <li class="social-list__item">
+                  <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}" class="social-list__link">
+                    {% include social_icon %}
+                    <span class="icon-fallback-text">{{ social }}</span>
+                  </a>
+                </li>
+              {% endif %}
+
+            {% endfor %}
+          </ul>
+        </div>
+        <!-- /.social-icons -->
+    </div>
+    </div>
+    <!-- /.footer__box -->
+  </div>
+  <!-- /.footer -->
+
+  </div>
+  <!-- /.page-width -->
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Site info"
+      },
+      {
+        "type": "image_picker",
+        "id": "small_logo",
+        "label": "Small logo"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_payment_icons",
+        "label": "Show payment icons",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "payment_icons",
+        "label": "Payment icons"
+      },
+      {
+        "type": "header",
+        "content": "Footer menu"
+      },
+      {
+        "type": "text",
+        "id": "list_title",
+        "label": "Menu title",
+        "default": "Info"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_linklist",
+        "label": "First menu",
+        "default": "footer"
+      },
+      {
+        "type": "header",
+        "content": "Subscribe"
+      },
+      {
+        "type": "text",
+        "id": "subscribe_title",
+        "label": "Subscribe title",
+        "default": "Subscribe"
+      },
+      {
+        "type": "text",
+        "id": "subscribe_label",
+        "label": "Subscribe label",
+        "default": "Signup to get the latest news..."
+      },
+      {
+        "type": "text",
+        "id": "subscribe_action",
+        "label": "Mailchimp action URL"
+      }
+    ]
+  }
+
+{% endschema %}

@@ -1,0 +1,38 @@
+<div data-section-id="{{ section.id }}" data-section-type="html">
+  <div class="text-block">
+    <div class="text-block__inner" style="background: #fff url({{section.settings.image_background | img_url: '400x'}}) center center/contain no-repeat">
+      <div class="text-block__desc">
+        {{section.settings.desc}}
+      </div>
+      <!-- /.text-block__desc -->
+    </div>
+  </div>
+</div>
+{% schema %}
+  { 
+    "name": "Text Block",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Text block with background"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_background",
+        "label": "Background image"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Content"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text block",
+        "category": "Custom content"
+      }
+    ]
+  }
+
+{% endschema %}

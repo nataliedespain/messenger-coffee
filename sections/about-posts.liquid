@@ -1,0 +1,98 @@
+<div class="posts-wrap">
+  {% for block in section.blocks %}
+  <div class="post-line {% if forloop.index == 1 %} is-intro {% endif %}  {% if block.settings.has_bg %} has-bg {% endif %}">
+    <div class="post-line__inner page-width">
+      <div class="post  {% cycle  'is-right', 'is-left' %}">
+ 
+        <div class="post__media">
+          <div class="post__media-inner">
+            {% if forloop.index == 1 %}
+            {% assign size = '1000x1000' %}
+            {% else %}
+            {% assign size = '800x800' %}
+            {% endif %}
+            <img src="{{block.settings.image | img_url: size, format: 'pjpg', crop: 'center'}}" 
+            alt="{{block.setttings.image}}" class="post__img">
+          </div>
+          <!-- /.post__inner -->
+        </div>
+        <!-- /.post__media -->
+
+        <div class="post__text">
+          <h3 class="post__title">{{block.settings.title}}</h3>
+          <!-- /.post__title -->
+          <div class="post__desc">{{block.settings.desc}}</div>
+          <!-- /.post__desc -->
+          {% if block.settings.button_text != blank %}
+          
+          <div class="post__action"> <a href="{{block.settings.button_url}}" class="btn btn-alt post__more">{{block.settings.button_text}}</a> </div>
+          <!-- /.post__action -->
+          {% endif %}
+        </div>
+        <!-- /.post__text -->
+      </div>
+      <!-- /.post -->
+    </div>
+    <!-- /.post-line__inner page-width -->
+  </div>
+  <!-- /.post-line -->
+  {% endfor %}
+</div>
+<!-- /.posts-wrap -->
+
+
+{% schema %}
+  {
+    "name": "Posts",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Posts"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add posts using blocks below"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "html",
+        "name": "Post",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "has_bg",
+            "label": "Enable",
+            "default": false,
+            "info": "if checked the post will have gray background"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "image"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "URL"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

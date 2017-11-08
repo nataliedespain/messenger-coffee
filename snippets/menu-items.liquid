@@ -1,0 +1,31 @@
+{% if section.settings.menu_enable %}
+<div class="menus-line">
+	{% if section.settings.image %}
+	<div class="menus-line__banner">
+		<img src="{{section.settings.image | img_url: '1920x', format: 'pjpg'}}" 
+		srcset="{{section.settings.image | img_url: '1920x', format: 'pjpg'}} 1x, {{section.settings.image | img_url: '1920x', scale: 2, format: 'pjpg'}} 2x" 
+		alt="{{section.settings.image.alt}}" class="menus-line__img">
+	</div>
+	<!-- /.menus-line__banner -->
+	{% endif %}
+	<div class="page-width">
+		<h2 class="menus-line__title page-title">{{section.settings.title}}</h2>
+		<!-- /.menus-line__title -->
+		<div class="menus-line__content">
+			<ul class="menulist">
+				{% for block in section.blocks %}
+				<li class="menulist__item">
+					<h3 class="menulist__title">{{block.settings.title}}</h3>
+					<div class="menulist__desc">{{block.settings.desc}}</div>
+				</li>
+				{% endfor %}
+			</ul>
+			
+		</div>
+		<!-- /.menus-line__content -->
+	</div>
+	<!-- /.page-width -->
+
+</div>
+<!-- /.menus-line -->
+{% endif %}

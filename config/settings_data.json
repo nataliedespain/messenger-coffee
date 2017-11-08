@@ -1,0 +1,664 @@
+{
+  "current": {
+    "type_base_size": "16px",
+    "color_primary": "#000",
+    "color_body_text": "#000",
+    "social_sharing_blog": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "#",
+    "social_facebook_link": "#",
+    "social_pinterest_link": "",
+    "social_instagram_link": "#",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "cart_notes_enable": true,
+    "favicon": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#1990c6",
+    "checkout_button_color": "#1990c6",
+    "checkout_error_color": "#ff6d6d",
+    "sections": {
+      "featured-collection": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "Featured Products",
+          "collection": "coffee"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo_809faea7-c2b4-4234-bfd6-adee80f4dd54.png",
+          "logo_max_width": 260,
+          "main_linklist": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "small_logo": "shopify:\/\/shop_images\/Vector-Smart-Object.png",
+          "show_payment_icons": true,
+          "payment_icons": "shopify:\/\/shop_images\/messenger_home_new_4f40ba42-1804-4814-9d53-9f5575ddfa87.png",
+          "list_title": "Info",
+          "footer_linklist": "footer",
+          "subscribe_title": "Subscribe",
+          "subscribe_label": "Signup to get the latest news...",
+          "subscribe_action": ""
+        }
+      },
+      "1508190222814": {
+        "type": "home-divider",
+        "settings": {
+          "color": "#e8e8e8",
+          "divider_count": 4
+        }
+      },
+      "home-hero-image": {
+        "type": "home-hero-image",
+        "blocks": {
+          "1509119460179": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero1_c88e6fe8-bcd1-4400-b1f7-6736bdec2524.png"
+            }
+          },
+          "1509119476338": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero2.png"
+            }
+          },
+          "1509119508810": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero3.png"
+            }
+          },
+          "1509119522944": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero4.png"
+            }
+          },
+          "1509119541733": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero5.png"
+            }
+          },
+          "1509119558027": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero6.png"
+            }
+          }
+        },
+        "block_order": [
+          "1509119460179",
+          "1509119476338",
+          "1509119508810",
+          "1509119522944",
+          "1509119541733",
+          "1509119558027"
+        ],
+        "settings": {
+          "description": "<p>real good coffee for the people<\/p>",
+          "button_text": "Shop Coffee",
+          "button_url": "\/products"
+        }
+      },
+      "1508191918559": {
+        "type": "home-features",
+        "blocks": {
+          "1508193277068": {
+            "type": "html",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/subscription.png",
+              "description": "<p>coffee to your door as often as you need <\/p>",
+              "button_text": "start your subscription",
+              "button_url": ""
+            }
+          },
+          "1508193281377": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/cafe.png"
+            }
+          }
+        },
+        "block_order": [
+          "1508193277068",
+          "1508193281377"
+        ],
+        "settings": {}
+      },
+      "1508227718897": {
+        "type": "home-instagram",
+        "settings": {}
+      },
+      "1508237501147": {
+        "type": "home-posts",
+        "settings": {
+          "title": "From the blog",
+          "blog": "news"
+        }
+      },
+      "1508248441830": {
+        "type": "home-text-block",
+        "settings": {
+          "image_background": "shopify:\/\/shop_images\/text-block-bg.png",
+          "desc": "<p>Messenger is a collaborative vision to create excellent, artisan-level roasts from the best coffees while taking care of our coffee farmers in a way that goes above and beyond the status quo <\/p>"
+        }
+      },
+      "offset_sidebar": {
+        "type": "offset_sidebar",
+        "settings": {
+          "main_linklist": "main-menu",
+          "second_linklist": "footer"
+        }
+      },
+      "about-banner": {
+        "type": "about-banner",
+        "settings": {
+          "banner_image": "shopify:\/\/shop_images\/about-banner.png"
+        }
+      },
+      "about-infobar": {
+        "type": "about-infobar",
+        "settings": {}
+      },
+      "about-text-block": {
+        "type": "about-text-block",
+        "settings": {
+          "desc": "<p>Coffee and bread bring people together. <br> Messenger Cafe brings Messenger Coffee and Ibis <br> Bakery together. Come find your seat at the table. <\/p>",
+          "image": "shopify:\/\/shop_images\/about-image.png"
+        }
+      },
+      "about-posts": {
+        "type": "about-posts",
+        "blocks": {
+          "1508583204035": {
+            "type": "html",
+            "settings": {
+              "has_bg": true,
+              "title": "Bakery & Mill",
+              "image": "shopify:\/\/shop_images\/about-1_baec3b2d-9b45-4706-892b-735cde5a5ab6.png",
+              "desc": "<p>The Ibis is a communal bird that loves to socialize and eat daily meals together. Bread was meant for that ritual. Ibis crafts au levain-style loaves from a natural yeast, creating bread the old fashioned way - hands on, and with care. We emphasize organic, local, and <br>seasonal ingredients of the highest quality. This is real bread, and you won&rsquo;t be disappointed.<\/p>",
+              "button_text": "View menu",
+              "button_url": "shopify:\/\/pages\/menus"
+            }
+          },
+          "1508583683117": {
+            "type": "html",
+            "settings": {
+              "has_bg": false,
+              "title": "Roasting",
+              "image": "shopify:\/\/shop_images\/about-2_6d35a7b3-a7af-418b-a0ad-757b723f73f1.png",
+              "desc": "<p>Coffee tumbling out of the roaster into the cooling tray is truly satisfying to the senses. Experience it close-up from our two San Franciscan drum roasters. See, smell, hear and taste the coffee from our second floor seating that adjoins the roasting area.<\/p>",
+              "button_text": "",
+              "button_url": ""
+            }
+          },
+          "1508584076185": {
+            "type": "html",
+            "settings": {
+              "has_bg": true,
+              "title": "Cafe & Slowbar",
+              "image": "shopify:\/\/shop_images\/about-3_71662fcd-1900-467c-b48d-d86ce9ad56cb.png",
+              "desc": "<p>The ultimate realization of our motto: real good coffee for the people. We&rsquo;ve been sourcing and roasting coffee since 2014 and now we get to brew it for you. Enjoy classic espresso drinks, manual brews, seasonal house-made specials, or a perfect cup of drip with a fresh pastry from Ibis Bakery. Come up to the Slowbar for special tastings and guided coffee experiences, education and events <\/p>",
+              "button_text": "View Menu",
+              "button_url": "shopify:\/\/pages\/menus"
+            }
+          },
+          "1508585161786": {
+            "type": "html",
+            "settings": {
+              "has_bg": false,
+              "title": "rooftop",
+              "image": "shopify:\/\/shop_images\/about-4.png",
+              "desc": "<p>Take in the views and soak up some sun from our rooftop patio. Coffee tastes better in front of an outdoor fireplace.<\/p>",
+              "button_text": "",
+              "button_url": ""
+            }
+          },
+          "1508585273064": {
+            "type": "html",
+            "settings": {
+              "has_bg": false,
+              "title": "dunlop room",
+              "image": "shopify:\/\/shop_images\/about-5.png",
+              "desc": "<p>The penthouse level Dunlop Room is an ideal quiet spot and it can be reserved for private meetings. It can seat up to 16 guests. Inquire for availability and catering packages.<\/p>",
+              "button_text": "",
+              "button_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "1508583204035",
+          "1508583683117",
+          "1508584076185",
+          "1508585161786",
+          "1508585273064"
+        ],
+        "settings": {}
+      },
+      "page-menus": {
+        "type": "page-menus",
+        "settings": {}
+      },
+      "menu-1": {
+        "type": "menu-1",
+        "blocks": {
+          "1508620963833": {
+            "type": "html",
+            "settings": {
+              "title": "country",
+              "desc": "<p>Inspired by the rustic country breads of France, this bread consists of a custardy interior and a bold, contrasting crust.&nbsp; It is fantastic for sandwiches and for dipping in<\/p>"
+            }
+          },
+          "1508621057135": {
+            "type": "html",
+            "settings": {
+              "title": "MULTIGRAIN",
+              "desc": "<p>A hearty and flavorful loaf jam-packed with toasted grains, seeds and whole grain flours.<\/p>"
+            }
+          },
+          "1508621083165": {
+            "type": "html",
+            "settings": {
+              "title": "CHEESE SLIPPER",
+              "desc": "<p>A chewy ciabatta studded and topped with a blend of four cheeses.&nbsp; Also available with additional Gorgonzola.&nbsp; Great for <br>sharing as an appetizer or eating alongside a green salad.<\/p>"
+            }
+          },
+          "1508621106151": {
+            "type": "html",
+            "settings": {
+              "title": "country",
+              "desc": "<p>Inspired by the rustic country breads of France, this bread consists of a custardy interior and a bold, contrasting crust.&nbsp; It is fantastic for sandwiches and for dipping in<\/p>"
+            }
+          },
+          "1508621152876": {
+            "type": "html",
+            "settings": {
+              "title": "MULTIGRAIN",
+              "desc": "<p>A hearty and flavorful loaf jam-packed with toasted grains, seeds and whole grain flours.<\/p>"
+            }
+          },
+          "1508621170359": {
+            "type": "html",
+            "settings": {
+              "title": "CHEESE SLIPPER",
+              "desc": "<p>A chewy ciabatta studded and topped with a blend of four cheeses.&nbsp; Also available with additional Gorgonzola.&nbsp; Great for <br>sharing as an appetizer or eating alongside a green salad.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1508620963833",
+          "1508621057135",
+          "1508621083165",
+          "1508621106151",
+          "1508621152876",
+          "1508621170359"
+        ],
+        "settings": {
+          "menu_enable": true,
+          "title": "ibis BREAD",
+          "image": "shopify:\/\/shop_images\/m-1.png"
+        }
+      },
+      "menu-2": {
+        "type": "menu-2",
+        "blocks": {
+          "1508621209119": {
+            "type": "html",
+            "settings": {
+              "title": "season gilette",
+              "desc": "<p>nspired by the rustic country breads of France, this bread consists of a custardy interior and a bold, contrasting crust.&nbsp; It is fantastic for sandwiches and for dipping in<\/p>"
+            }
+          },
+          "1508621227073": {
+            "type": "html",
+            "settings": {
+              "title": "croissant",
+              "desc": "<p>A hearty and flavorful loaf jam-packed with toasted grains, seeds and whole grain flours.<\/p>"
+            }
+          },
+          "1508621241537": {
+            "type": "html",
+            "settings": {
+              "title": "almond croissant",
+              "desc": "<p>A chewy ciabatta studded and topped with a blend of four cheeses.&nbsp; Also available with additional Gorgonzola.&nbsp; Great for <br>sharing as an appetizer or eating alongside a green salad.<\/p>"
+            }
+          },
+          "1508621271922": {
+            "type": "html",
+            "settings": {
+              "title": "season gilette",
+              "desc": "<p>nspired by the rustic country breads of France, this bread consists of a custardy interior and a bold, contrasting crust.&nbsp; It is fantastic for sandwiches and for dipping in<\/p>"
+            }
+          },
+          "1508621285791": {
+            "type": "html",
+            "settings": {
+              "title": "croissant",
+              "desc": "<p>A hearty and flavorful loaf jam-packed with toasted grains, seeds and whole grain flours.<\/p>"
+            }
+          },
+          "1508621299719": {
+            "type": "html",
+            "settings": {
+              "title": "almond croissant",
+              "desc": "<p>A chewy ciabatta studded and topped with a blend of four cheeses.&nbsp; Also available with additional Gorgonzola.&nbsp; Great for <br>sharing as an appetizer or eating alongside a green salad.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1508621209119",
+          "1508621227073",
+          "1508621241537",
+          "1508621271922",
+          "1508621285791",
+          "1508621299719"
+        ],
+        "settings": {
+          "menu_enable": true,
+          "title": "ibis pastries",
+          "image": ""
+        }
+      },
+      "menu-3": {
+        "type": "menu-3",
+        "blocks": {
+          "1508621342734": {
+            "type": "html",
+            "settings": {
+              "title": "Croissant with Jam",
+              "desc": "<p>Warm classic croissant with house made jam and butter<\/p>"
+            }
+          },
+          "1508621366654": {
+            "type": "html",
+            "settings": {
+              "title": "Toast with  Almond Butter",
+              "desc": "<p>Fruit bread with house butter, almond butter, and honey<\/p>"
+            }
+          },
+          "1508621403656": {
+            "type": "html",
+            "settings": {
+              "title": "Toast with Jam",
+              "desc": "<p>Country bread with house butter and jam<\/p>"
+            }
+          },
+          "1508621432181": {
+            "type": "html",
+            "settings": {
+              "title": "Coddled Egg",
+              "desc": "<p>Poached egg and toast served over corn grits<\/p>"
+            }
+          },
+          "1508621461588": {
+            "type": "html",
+            "settings": {
+              "title": "Egg Sandwich",
+              "desc": "<p>Bacon, eggs, and cheese on brioche bread<\/p>"
+            }
+          },
+          "1508621490703": {
+            "type": "html",
+            "settings": {
+              "title": "Porridge",
+              "desc": "<p>Seasonal fermented porridge with butter, honey, and fruit<\/p>"
+            }
+          },
+          "1508621516972": {
+            "type": "html",
+            "settings": {
+              "title": "Bread and Butter",
+              "desc": "<p>Warm seasonal bread with house cultured butter<\/p>"
+            }
+          },
+          "1508621573727": {
+            "type": "html",
+            "settings": {
+              "title": "BLT",
+              "desc": "<p>David&rsquo;s Pasture with heirloom tomatoes and lettuce on country bread<\/p>"
+            }
+          },
+          "1508621615079": {
+            "type": "html",
+            "settings": {
+              "title": "Grilled Cheese",
+              "desc": "<p>Rotating cheese with house savory jam on bread<\/p>"
+            }
+          },
+          "1508621644190": {
+            "type": "html",
+            "settings": {
+              "title": "Charcuterie Plate",
+              "desc": "<p>Selection of three cheeses and three cured meats, served with toasted bread<\/p>"
+            }
+          },
+          "1508621674768": {
+            "type": "html",
+            "settings": {
+              "title": "farm salad",
+              "desc": "<p>Seasonal greens and dressings<\/p>"
+            }
+          },
+          "1508621692223": {
+            "type": "html",
+            "settings": {
+              "title": "soup",
+              "desc": "<p>Seasonal flavors<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1508621342734",
+          "1508621366654",
+          "1508621403656",
+          "1508621432181",
+          "1508621461588",
+          "1508621490703",
+          "1508621516972",
+          "1508621573727",
+          "1508621615079",
+          "1508621644190",
+          "1508621674768",
+          "1508621692223"
+        ],
+        "settings": {
+          "menu_enable": true,
+          "title": "food",
+          "image": "shopify:\/\/shop_images\/m-2.png"
+        }
+      },
+      "menu-4": {
+        "type": "menu-4",
+        "blocks": {
+          "1508621734377": {
+            "type": "html",
+            "settings": {
+              "title": "Espresso",
+              "desc": ""
+            }
+          },
+          "1508621737297": {
+            "type": "html",
+            "settings": {
+              "title": "Macchiato",
+              "desc": ""
+            }
+          },
+          "1508621745035": {
+            "type": "html",
+            "settings": {
+              "title": "Cortado",
+              "desc": "<p>4 ounces<\/p>"
+            }
+          },
+          "1508621777931": {
+            "type": "html",
+            "settings": {
+              "title": "Cappuccino",
+              "desc": "<p>6 ounces<\/p>"
+            }
+          },
+          "1508621788847": {
+            "type": "html",
+            "settings": {
+              "title": "Latte",
+              "desc": "<p>8 + 12 + 16 ounces<\/p>"
+            }
+          },
+          "1508621809776": {
+            "type": "html",
+            "settings": {
+              "title": "Mocha",
+              "desc": "<p>8 + 12 + 16 ounces<\/p>"
+            }
+          },
+          "1508621821760": {
+            "type": "html",
+            "settings": {
+              "title": "Americano",
+              "desc": "<p>8 + 12 + 16 ounces<\/p>"
+            }
+          },
+          "1508621848443": {
+            "type": "html",
+            "settings": {
+              "title": "Drip",
+              "desc": "<p>8 + 12 + 16 ounces<\/p>"
+            }
+          },
+          "1508621864334": {
+            "type": "html",
+            "settings": {
+              "title": "toddy",
+              "desc": "<p>8 + 12 + 16 ounces<\/p>"
+            }
+          },
+          "1508621880059": {
+            "type": "html",
+            "settings": {
+              "title": "Manual Brew",
+              "desc": "<p>chemex + beehouse<\/p>"
+            }
+          },
+          "1508621894609": {
+            "type": "html",
+            "settings": {
+              "title": "nitro cold brew",
+              "desc": "<p>9 ounces<\/p>"
+            }
+          },
+          "1508621922122": {
+            "type": "html",
+            "settings": {
+              "title": "spirit Tea",
+              "desc": "<p>8 + 12 + 16 ounces<\/p>"
+            }
+          },
+          "1508621938230": {
+            "type": "html",
+            "settings": {
+              "title": "Chai",
+              "desc": "<p>8 + 12 + 16 ounces<\/p>"
+            }
+          },
+          "1508621954640": {
+            "type": "html",
+            "settings": {
+              "title": "Cocoa",
+              "desc": "<p>8 + 12 + 16 ounces<\/p>"
+            }
+          },
+          "1508621968959": {
+            "type": "html",
+            "settings": {
+              "title": "House soda",
+              "desc": "<p>16 ounces<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1508621734377",
+          "1508621737297",
+          "1508621745035",
+          "1508621777931",
+          "1508621788847",
+          "1508621809776",
+          "1508621821760",
+          "1508621848443",
+          "1508621864334",
+          "1508621880059",
+          "1508621894609",
+          "1508621922122",
+          "1508621938230",
+          "1508621954640",
+          "1508621968959"
+        ],
+        "settings": {
+          "menu_enable": true,
+          "title": "messenger drinks",
+          "image": "shopify:\/\/shop_images\/m-4.png"
+        }
+      },
+      "menu-5": {
+        "type": "menu-5",
+        "settings": {
+          "menu_enable": true,
+          "title": "",
+          "image": ""
+        }
+      },
+      "page-happenings": {
+        "type": "page-happenings",
+        "settings": {
+          "title": "there is always something\nto look forward to",
+          "blog_handle": "happenings",
+          "button_text": "find out more"
+        }
+      }
+    },
+    "content_for_index": [
+      "1508190222814",
+      "1508191918559",
+      "featured-collection",
+      "1508227718897",
+      "1508237501147",
+      "1508248441830"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "sections": {
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        }
+      },
+      "content_for_index": [
+        "featured-collection"
+      ]
+    }
+  }
+}

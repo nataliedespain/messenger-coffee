@@ -1,0 +1,97 @@
+<div class="offset-sidebar">
+  <div class="form-box is-top">
+    <div class="form-box__form-wrap">
+      <form action="/search" method="get" role="search" class="form-box__form">
+        <div class="form-box__input-group">
+          <label for="Search" class="label-hidden">
+            {{ 'general.search.placeholder' | t }}
+          </label>
+          <input id="subscribeForm" type="search" name="q" id="Search" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" class="form-box__input" required>
+          <button class="form-box__submit">
+            {% include 'icon-search' %}
+          </button>
+        </div>
+        <!-- /.form-box__input-group -->
+      </form>
+      <!-- /.form-box__form -->
+    </div>
+    <!-- /.form-box__form-wrap -->
+  </div>
+  <!-- /.form-box -->
+
+  <nav role="navigation" class="navigation">
+    <ul class="site-nav">
+      {% for link in linklists[section.settings.main_linklist].links %}
+      {%- assign child_list_handle = link.title | handleize -%}
+      {% comment %}{% if menus[child_list_handle].links != blank %}
+      <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
+        <a href="{{ link.url }}" class="site-nav__link">
+          {{ link.title }}
+          {% include 'icon-arrow-down' %}
+        </a>
+        <ul class="site-nav__submenu">
+          {% for childlink in menus[child_list_handle].links %}
+          <li {% if childlink.active %}class="site-nav--active"{% endif %}>
+            <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% else %}  {% endif %}{% endcomment %}
+      <li {% if link.active %}class="active"{% endif %}>
+        <a href="{% if link.url == '/collections/coffee' %} /products {% else %}{{ link.url }}{% endif %}" class="site-nav__link">{{ link.title }}</a>
+      </li>
+
+      {% endfor %}
+    </ul>
+    <ul class="linklist is-light">
+      {% for link in linklists[section.settings.second_linklist].links %}
+        <li class="linklist__item {% if link.active %}active{% endif %}"><a href="{{ link.url }}" class="linklist__link">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="social-icons">
+    {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
+    <ul class="social-list is-left">
+      {% for social in social_accounts %}
+        {%- assign social_handle = social | handleize -%}
+        {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+        {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+
+        {% if settings[social_link] != blank %}
+          <li class="social-list__item">
+            <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}" class="social-list__link">
+              {% include social_icon %}
+              <span class="icon-fallback-text">{{ social }}</span>
+            </a>
+          </li>
+        {% endif %}
+
+      {% endfor %}
+    </ul>
+  </div>
+  <!-- /.social-icons -->
+</div>
+
+{% schema %}
+  {
+    "name": "Offset menu",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Settings for offset menu"
+      },
+      {
+        "type": "link_list",
+        "id": "main_linklist",
+        "label": "Main menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "second_linklist",
+        "label": "Second menu"
+      }
+    ]
+  }
+{% endschema %}

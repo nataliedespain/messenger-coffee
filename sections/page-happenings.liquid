@@ -1,0 +1,89 @@
+	<div class="barbox is-index">
+ 		<div class="infobar">
+ 			<div class="infobar__content">
+ 				<div class="barlist jsAllCollection">
+ 					{% for link in linklists['about'].links %}
+ 					<a href="{{link.url}}" class="barlist__link {% if link.active %} active {% endif %}">{{link.title}}</a>
+ 					{% endfor %}
+ 				</div>
+ 				<!-- /.barlist -->
+ 			</div>
+ 		</div>
+ 		<!-- /.infobar__inner -->
+ 	</div>
+<!-- /.infobar -->
+
+<div class="page-width">
+	<div class="page-header">
+		<h1 class="page-title is-small">{{section.settings.title}}</h1>
+	</div>
+</div>
+
+<div class="posts-wrap">
+  {% for article in blogs[section.settings.blog_handle].articles limit: 7 %}
+  <div class="post-line is-small">
+    <div class="post-line__inner page-width">
+      <div class="post  {% cycle  'is-left', 'is-right' %}">
+ 
+        <div class="post__media">
+          <div class="post__media-inner">
+            {% assign size = '800x800' %}
+
+            <img src="{{article.image | img_url: size, format: 'pjpg', crop: 'center'}}" 
+            alt="{{article.image.alt}}" class="post__img">
+          </div>
+          <!-- /.post__inner -->
+        </div>
+        <!-- /.post__media -->
+
+        <div class="post__text">
+        	<div class="post__meta">
+        	  {{article.created_at | time_tag: '%b %d ' }}
+        	</div>
+          <h3 class="post__title">{{article.title}}</h3>
+          <!-- /.post__title -->
+          <div class="post__desc">{{article.excerpt_or_content | strip_html | truncate: 200}}</div>
+          <!-- /.post__desc -->
+          
+          <div class="post__action"> <a href="{{article.url}}" class="btn btn-alt post__more">{{section.settings.button_text}}</a> </div>
+          <!-- /.post__action -->
+        </div>
+        <!-- /.post__text -->
+      </div>
+      <!-- /.post -->
+    </div>
+    <!-- /.post-line__inner page-width -->
+  </div>
+  <!-- /.post-line -->
+  {% endfor %}
+</div>
+<!-- /.posts-wrap -->
+
+
+{% schema %}
+  {
+    "name": "Happenings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Happenings posts"
+      },
+      {
+				"type": "html",
+				"id": "title",
+				"label": "Page title"
+      },
+      {
+        "type": "blog",
+        "id": "blog_handle",
+        "label": "Choose blog as source"
+      },
+      {
+      	"type": "text",
+      	"id": "button_text",
+      	"label": "More text",
+      	"default": "find out more"
+      }
+    ]
+  }
+{% endschema %}

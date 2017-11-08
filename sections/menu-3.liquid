@@ -1,0 +1,51 @@
+{% include 'menu-items' %}
+
+{% schema %}
+  {
+    "name": "Menu 3",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Menu 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "menu_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Banner"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add menu items using blocks below"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "html",
+        "name": "Menu item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

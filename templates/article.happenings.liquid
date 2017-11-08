@@ -1,0 +1,35 @@
+	<div class="barbox is-index">
+ 		<div class="infobar">
+ 			<div class="infobar__content">
+ 				<div class="barlist jsAllCollection">
+ 					{% for link in linklists['about'].links %} 
+ 					<a href="{{link.url}}" class="barlist__link {% if link.active %} active {% endif %} {% if forloop.last and template == 'article.happenings' %} active {% endif %}">{{link.title}}</a>
+ 					{% endfor %}
+ 				</div>
+ 				<!-- /.barlist -->
+ 			</div>
+ 		</div>
+ 		<!-- /.infobar__inner -->
+ 	</div>
+<!-- /.infobar -->
+
+<div class="page-banner with-margin">
+	<img src="{{article.image | img_url: '1920x', format: 'pjpg'}}" 
+	srcset="{{article.image | img_url: '1920x', format: 'pjpg'}} 1x, {{article.image | img_url: '1920x', scale: 2, format: 'pjpg'}} 2x"
+	alt="{{section.settings.banner_image.alt}}" class="page-banner__img">
+</div>
+<!-- /.page-banner -->
+
+<div class="page-wrap">
+	<div class="page-width">
+		<div class="article-meta text-center">
+		  {{article.created_at | time_tag: '%b %d ' }}
+		</div>
+		<h1 class="page-title text-center">{{article.title}}</h1>
+		<div class="rte editor">
+			{{article.content}}
+		</div>
+	</div>
+	<!-- /.page-width -->
+</div>
+<!-- /.page-wrap -->

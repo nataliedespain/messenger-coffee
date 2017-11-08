@@ -1,0 +1,30 @@
+<div class="collection">
+  {% for l in linklists['collection-page'].links %}
+  {% assign coll = l.object %}
+  <div class="collection__section" id="{{coll.handle}}">
+    {% if coll.image %}
+    <img src="{{coll.image | img_url: '1920x' }}" 
+    srcset="{{coll.image | img_url: '1920x' }} 1x, {{coll.image | img_url: '700x' }} 700w, {{coll.image | img_url: '1920x', scale: 2 }} 2x" 
+    alt="" class="collection__image">
+    {% else %}
+    <hr>
+    {% endif %}
+    <!-- /.collection__section-title -->
+    <div class="collection__content page-width">
+    <h1 class="collection__section-title">{{l.title}}</h1>
+      <div class="products">
+        {% assign collection = coll %}
+        {% for product in coll.products limit: 9 %}
+        <div class="products__item"> 
+          {% include 'product-item' %}
+        </div>
+        <!-- /.products__item -->
+        {% endfor %}
+      </div>
+    </div>
+    <!-- /.collection__content -->
+  </div>
+  <!-- /.collection__section -->
+  {%  endfor %}
+</div>
+<!-- /.collection -->

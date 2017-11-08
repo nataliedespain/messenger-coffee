@@ -1,0 +1,108 @@
+  <div class="barbox is-index">
+    <div class="infobar">
+      <div class="infobar__content">
+        <div class="barlist jsAllCollection">
+          {% for link in linklists['blog'].links %}
+          <a href="{{link.url}}" class="barlist__link {% if link.active %} active {% endif %}">{{link.title}}</a>
+          {% endfor %}
+        </div>
+        <!-- /.barlist -->
+      </div>
+    </div>
+    <!-- /.infobar__inner -->
+  </div>
+<!-- /.infobar -->
+<div class="divider"></div>
+
+{% paginate blog.articles by 5 %}
+  {% comment %}
+    {%- assign blog_title = blog.title -%}
+
+    {% if current_tags %}
+      {% capture blog_title %}{{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}{% endcapture %}
+    {% endif %}
+
+    <h1>{{ blog_title }}</h1>
+
+    {% if blog.all_tags.size > 0 %}
+      <h2>{{ 'blogs.general.categories' | t }}</h2>
+
+      <ul>
+        {% for tag in blog.all_tags %}
+
+          {% if current_tags contains tag %}
+            <li>{{ tag }}</li>
+          {% else %}
+            <li>{{ tag | link_to_tag: tag }}</li>
+          {% endif %}
+
+        {% endfor %}
+      </ul>
+    {% endif %}{% endcomment %}
+
+
+  <div class="posts-wrap">
+    {% for article in blog.articles %}
+    <div class="post-line {% if forloop.index == 1 %} in-blog is-intro  has-bg  {% endif %}">
+      <div class="post-line__inner page-width">
+        <div class="post  {% cycle  'is-left', 'is-right' %}">
+   
+          <div class="post__media">
+            <div class="post__media-inner">
+              {% assign size = '800x800' %}
+
+              <img src="{{article.image | img_url: size, format: 'pjpg', crop: 'center'}}" 
+              alt="{{article.image.alt}}" class="post__img">
+            </div>
+            <!-- /.post__inner -->
+          </div>
+          <!-- /.post__media -->
+
+          <div class="post__text">
+            <div class="post__meta">
+              {{article.created_at | time_tag: '%b %d ' }}
+            </div>
+            <h3 class="post__title">{{article.title}}</h3>
+            <!-- /.post__title -->
+            <div class="post__desc">{{article.excerpt_or_content | strip_html | truncate: 200}}</div>
+            <!-- /.post__desc -->
+            
+            <div class="post__action"> <a href="{{article.url}}" class="btn btn-alt post__more">{{section.settings.button_text}}</a> </div>
+            <!-- /.post__action -->
+          </div>
+          <!-- /.post__text -->
+        </div>
+        <!-- /.post -->
+      </div>
+      <!-- /.post-line__inner page-width -->
+    </div>
+    <!-- /.post-line -->
+    {% endfor %}
+  </div>
+  <!-- /.posts-wrap -->
+
+  {% if paginate.pages > 1 %}
+    {% include 'pagination' %}
+  {% endif %}
+
+{% endpaginate %}
+
+
+
+{% schema %}
+  {
+    "name": "Blog",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Blog settings"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "More text",
+        "default": "Read More"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,36 @@
+<div class="product {{place}}">
+ <a href="{{ product.url | within: collection }}" class="product__link">
+
+    <img src="{{product.featured_image | img_url: '480x' }}" 
+    srcset="{{product.featured_image | img_url: '480x' }} 1x, {{product.featured_image | img_url: '480x', scale: 2 }} 2x"
+    alt="{{product.featured_image.alt | default: product.title}}" class="product__image">
+  <h4 class="product__title">{{ product.title }}</h4>
+  </a>
+  <div class="product__prices">
+    <a href="{{product.url | within: collection}}" class="product__prices-link">
+    {% if product.compare_at_price > product.price %}
+
+      {% if product.price_varies %}
+        {%- assign sale_price = product.price | money -%}
+        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+      {% else %}
+        {{ 'products.product.on_sale' | t }}
+        {{ product.price | money }}
+      {% endif %}
+
+    {% else %}
+
+      {% if product.price_varies %}
+        {%- assign price = product.price | money -%}
+        {{ 'products.product.from_text_html' | t: price: price }}
+      {% else %}
+        {{ product.price | money }}
+      {% endif %}
+
+    {% endif %}
+    </a>
+  </div>  
+  <a href="{{product.url | within: collection }}" class="btn product__add">{{'products.product.add_to_cart' | t }}</a>
+
+</div>
+<!-- /.product -->

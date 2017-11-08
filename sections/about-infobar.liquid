@@ -1,0 +1,53 @@
+<div class="contact-bar">
+  <div class="contact-bar__inner page-width">
+    <div class="contact-boxes">
+      <div class="contact-boxes__item">
+        <h2 class="contact-boxes__item-title">address & phone</h2>
+        <!-- /.contact-boxes__box-title -->
+        <div class="contact-boxes__content">
+          <div class="contact-line">
+            <span class="contact-line__icon icon-svg"> {% include 'icon-location' %} </span>
+            <span class="contact-line__text">1624 Grand Blvd KC MO 64108</span>
+          </div>
+          <!-- /.contact-line -->
+          <div class="contact-line">
+            <span class="contact-line__icon icon-svg"> {% include 'icon-phone' %} </span>
+            <span class="contact-line__text">+1 816 345 6567</span>
+          </div>
+          <!-- /.contact-line -->
+        </div>
+        <!-- /.contact-boxes__content -->
+      </div>
+      <div class="contact-boxes__item"> 
+        <h2 class="contact-boxes__item-title">hours</h2>
+        <!-- /.contact-boxes__box-title -->
+        <div class="contact-boxes__content">
+          <div class="contact-line">
+            <span class="contact-line__icon icon-svg"> {% include 'icon-clock' %} </span>
+            <span class="contact-line__text">Wed - Sun    7-3</span>
+          </div>
+          <!-- /.contact-line -->
+        </div>
+        <!-- /.contact-boxes__content -->
+      </div>
+      <!-- /.contact-bar__box -->
+
+    </div>
+    <!-- /.contact-boxes -->
+  </div>
+  <!-- /.contact-bar__inner -->
+</div>
+<!-- /.contact-bar -->
+
+
+{% schema %}
+  {
+    "name": "Infobar",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Box 1"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,86 @@
+<div data-section-id="{{ section.id }}" data-section-type="Features">
+  <div class="features" id="features-anchor">
+    {% for block  in section.blocks %}
+    <div class="features__item">
+      <a href="{{block.link}}">
+
+      <img src="{{block.settings.image | img_url: '800x', format: 'pjpg'}}"
+      srcset="{{ block.settings.image | img_url: '800x', format: 'pjpg' }} 1x, {{ block.settings.image | img_url: '800x', format: 'pjpg',  scale: 2 }} 2x"
+       alt="{{block.settings.image.alt}}">
+      </a>
+       {% if block.type == 'html' %}
+       <div class="features__desc">
+         <div class="features__desc-text">{{block.settings.description}}</div>
+         <a href="{{block.settings.button_url}}" class="btn btn-dark features__action">{{block.settings.button_text}}</a>
+       </div>
+       {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  <!-- /.features -->
+</div>
+
+{% schema %}
+  {
+    "name": "Features",
+    "max_blocks": 8,
+    "settings": [
+      {
+        "type": "header",
+        "content": "Add feature block below"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "html",
+        "name": "Image with text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "<p>Description text is going here</p>"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text",
+            "default": "start your subscription"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button url"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Just image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Features",
+        "category": "Custom content"
+      }
+    ]
+  }
+{% endschema %}

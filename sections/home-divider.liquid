@@ -1,0 +1,38 @@
+<div data-section-id="{{ section.id }}" data-section-type="divider">
+  <div class="divider-bar">
+    {% assign lineCount = section.settings.divider_count %}
+    {% for i in (1..lineCount) %}
+      <div class="divider-bar__line" style="background-color: {{section.settings.color}};"></div>
+    {% endfor %}
+  </div>
+  <!-- /.divider-bar -->
+</div>
+
+{% schema %}
+  {
+    "name": "Divider bar",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Divider color",
+        "default": "#e8e8e8"
+      },
+      {
+        "type": "range",
+        "id": "divider_count",
+        "label": "Divider lines count",
+        "step": 1,
+        "min": 2,
+        "max": 6,
+        "default": 4
+      }
+    ],
+    "presets": [
+      {
+        "name": "Divider",
+        "category": "Divider"
+      }
+    ]
+  }
+{% endschema %}

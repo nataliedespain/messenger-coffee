@@ -1,0 +1,26 @@
+<div class="header-buttons">
+
+
+	<div class="header-buttons__item">
+		
+		<a href="/cart" class="cart-link">
+		  {% include 'icon-cart' %}
+		  {{ 'layout.cart.title' | t }}
+		  {% comment %}({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }}){% endcomment %}
+		</a>
+	</div>
+	<!-- /.header-buttons__item -->
+		<div class="header-buttons__item">
+		<a href="#" class="jsOpenMenu menu-link">
+			<div class="humburger-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			{{'layout.header.menu' | t }}
+		</a>
+	</div>
+	<!-- /.header-buttons__item -->
+</div>
+<!-- /.header-buttons -->

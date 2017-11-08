@@ -1,0 +1,14 @@
+	<div class="barbox is-index">
+ 		<div class="infobar">
+ 			<div class="infobar__content">
+ 				<div class="barlist jsAllCollection">
+ 					{% for link in linklists['about'].links %}
+ 					<a href="{{link.url}}" class="barlist__link {% if link.active %} active {% endif %}">{{link.title}}</a>
+ 					{% endfor %}
+ 				</div>
+ 				<!-- /.barlist -->
+ 			</div>
+ 		</div>
+ 		<!-- /.infobar__inner -->
+ 	</div>
+<!-- /.infobar -->
