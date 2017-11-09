@@ -2425,17 +2425,19 @@ display: -webkit-box;
 		margin-bottom: 13px;
 		display: block;
 	}
-	.form-box__submit{
-		background: none;
-		border: none;
-	}
 	.form-box__input-group{
-		border: 2px solid #747474;
+		border: 2px solid #CCCCCC;
+		color: #999999;
 		position: relative;
 		height: 42px;
 		min-width: 330px;
 		border-radius: 3px;
+		padding: 0 10px;
 	}
+  .form-box__input-textbox {
+		resize: none;
+		padding: 10px;
+  }
 	.form-box__input{
 		background: none;
 		border: none;
@@ -2443,9 +2445,11 @@ display: -webkit-box;
 		padding-right: 40px;
 		height: 100%;
 		width: 100%;
-		color: #747474;
+		color: #999999;
 	}
 	.form-box__submit{
+    background: none;
+		border: none;
 		position: absolute;
 		right: 0;
 		top:0;
@@ -2884,4 +2888,73 @@ display: -webkit-box;
   .apple-wallet {
     display: none;
   }
+}
+
+/*================ General Page Content ================*/
+.contentsCenter {
+	margin: 0 auto;
+}
+
+.page--text-content {
+	margin: 0 auto;
+	max-width: $grid-medium;
+	text-align: center;
+}
+
+.page-title--container {
+	text-align: center;
+
+	.page-title__large {
+		text-transform: uppercase;
+		font-family: "Gotham Thin";
+		letter-spacing: 5px;
+		font-size: 40px;
+	}
+}
+
+.page--divider {
+	border: 2px solid #CCCCCC;
+	width: 100vw;
+	margin: 30px 0;
+}
+
+/*================ Contact Us Page ================*/
+.contact-page--info {
+	.product__title {
+		text-transform: uppercase;
+		text-align: center;
+		font-family: "Gotham Medium";
+		letter-spacing: 1.3px;
+	}
+
+	.contact-page--address {
+		margin-right: 20px;
+	}
+
+}
+
+.form-container {
+	max-width: $grid-medium;
+	margin: 40px auto;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+
+	.form-container--left, .form-container--right {
+		width: 50%;
+		padding: 10px;
+
+		.form-box__input-group {
+			width: 100%;
+			/*margin: 0;*/
+		}
+
+		.form-box__input-textbox {
+			height: 156px;
+		}
+	}
+
+	.contact-page--button {
+		margin: 0 auto;
+	}
 }

@@ -1,54 +1,87 @@
-<h1>{{ page.title }}</h1>
+<div class="page-wrap">
+  {% section 'page-banner' %}
+  <div class="page-title--container">
+    <h1 class="page-title__large">{{ page.title }}</h1>
+  </div>
+  <div class="page-width rte editor">
+    <div class="page--text-content">
+      {{ page.content }}
+    </div>
+  </div>
 
-<div class="rte">
-  {{ page.content }}
-</div>
+  <hr class="page--divider" />
+  <div class="contact-page--info">
+    <h4 class="product__title">
+      <span class="contact-page--address">1624 Grand Blvd KC MO 64108</span>
+      <span class="contact-page--phone">+1 816 345 6567</span>
+    </h4>
+  </div>
 
-{% form 'contact' %}
+  <div class="page-width rte editor">
+    {% form 'contact' %}
 
-  {% if form.posted_successfully? %}
+    {% if form.posted_successfully? %}
     <p class="form-success">
       {{ 'contact.form.post_success' | t }}
     </p>
-  {% endif %}
-
-  {{ form.errors | default_errors }}
-
-  <label for="ContactFormName">{{ 'contact.form.name' | t }}</label>
-  <input type="text"
-    name="contact[name]"
-    id="ContactFormName"
-    placeholder="{{ 'contact.form.name' | t }}"
-    value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
-
-  <label for="ContactFormEmail">{{ 'contact.form.email' | t }}</label>
-  <input type="email"
-    name="contact[email]"
-    id="ContactFormEmail"
-    placeholder="{{ 'contact.form.email' | t }}"
-    value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-    spellcheck="false"
-    autocomplete="off"
-    autocapitalize="off">
-
-  <label for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
-  <input type="tel"
-    name="contact[phone]"
-    id="ContactFormPhone"
-    placeholder="{{ 'contact.form.phone' | t }}"
-    value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-    pattern="[0-9\-]*">
-
-  <label for="ContactFormMessage">{{ 'contact.form.message' | t }}</label>
-  <textarea rows="10"
-    name="contact[body]"
-    id="ContactFormMessage"
-    placeholder="{{ 'contact.form.message' | t }}">
-    {% if form.body %}
-      {{ form.body }}
     {% endif %}
-  </textarea>
 
-  <input type="submit" class="btn" value="{{ 'contact.form.send' | t }}">
+    {{ form.errors | default_errors }}
+    <div class="form-container">
 
-{% endform %}
+      <div class="form-container--left">
+        <div class="form-box">
+          <input type="text"
+          name="contact[name]"
+          id="ContactFormName"
+          class="form-box__input-group"
+          placeholder="{{ 'contact.form.name' | t }}"
+          value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+        </div>
+
+        <div class="form-box">
+          <input type="email"
+            name="contact[email]"
+            id="ContactFormEmail"
+            class="form-box__input-group"
+            placeholder="{{ 'contact.form.email' | t }}"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off">
+        </div>
+
+        <div class="form-box">
+          <input type="tel"
+            name="contact[phone]"
+            id="ContactFormPhone"
+            class="form-box__input-group last"
+            placeholder="{{ 'contact.form.phone' | t }}"
+            value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+            pattern="[0-9\-]*">
+        </div>
+      </div>
+      <div class="form-container--right">
+        <div class="form-box">
+          <textarea rows="10"
+            name="contact[body]"
+            id="ContactFormMessage"
+            class="form-box__input-group form-box__input-textbox"
+            placeholder="{{ 'contact.form.message' | t }}">
+            {% if form.body %}
+              {{ form.body }}
+            {% endif %}
+          </textarea>
+        </div>
+      </div>
+
+      <div class="contact-page--button">
+        <input type="submit" class="btn" value="{{ 'contact.form.send' | t }}">
+      </div>
+
+    </div>
+
+
+    {% endform %}
+  </div>
+</div>

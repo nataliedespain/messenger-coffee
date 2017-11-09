@@ -1,0 +1,18 @@
+<div class="page-banner">
+  <img src="{{section.settings.banner_image | img_url: '1920x', format: 'pjpg'}}"
+  srcset="{{section.settings.banner_image | img_url: '1920x', format: 'pjpg'}} 1x, {{section.settings.banner_image | img_url: '1920x', scale: 2, format: 'pjpg'}} 2x"
+  alt="{{section.settings.banner_image.alt}}" class="page-banner__img">
+</div>
+
+{% schema %}
+{
+  "name": "Banner Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner"
+    }
+  ]
+}
+{% endschema %}
