@@ -34,9 +34,9 @@ assets/ico-select.svg.liquid:
 assets/instafeed.min.js:
   development: 2017-11-05T13:47:28-06:00   1b9d5439b41e462220f9e6937df15b60
 assets/theme.js:
-  development: 2017-11-05T19:06:51-06:00   1fe407c7b91bbe94229cfddb6fb31126
+  development: 2017-11-10T09:39:12-06:00   1771276ce5d900b0490b28de5aad5db7
 assets/theme.scss.liquid:
-  development: 2017-11-08T23:27:40-06:00   0f692e21c7c006279f33d38e5f0e88ca
+  development: 2017-11-10T09:48:10-06:00   78a265511c6b45a677979ed432089424
 assets/vendor.js:
   development: 2017-11-05T13:47:29-06:00   b8e8dbe1aaf11c882d6d849a708113d1
 config/settings_data.json:
@@ -160,7 +160,7 @@ snippets/icon-jcb.liquid:
 snippets/icon-litecoin.liquid:
   development: 2017-11-05T13:47:30-06:00   051dfcb36fa17b532a087b12f0a49e0e
 snippets/icon-location.liquid:
-  development: 2017-11-05T13:47:30-06:00   4a3a81856c412d7720e61c3b4315c87c
+  development: 2017-11-09T15:43:52-06:00   4db4249ee0437b7d1ca1bb6de60a87c5
 snippets/icon-lock.liquid:
   development: 2017-11-05T13:47:30-06:00   60ae7ba03d14efa582faed8855821a58
 snippets/icon-maestro.liquid:
@@ -222,7 +222,7 @@ templates/article.liquid:
 templates/blog.liquid:
   development: 2017-11-05T13:47:31-06:00   d83cc3686f59028de70157c3babfbad1
 templates/cart.liquid:
-  development: 2017-11-05T13:47:31-06:00   f927f61105d8bc9cd43f052dbc4a1e63
+  development: 2017-11-10T09:45:46-06:00   88f34b11ff657a32a59f6de6730270b9
 templates/collection.liquid:
   development: 2017-11-05T13:47:31-06:00   8c430fd39393e7fb7f9a1a7a585cc11b
 templates/customers/account.liquid:
@@ -248,7 +248,7 @@ templates/list-collections.liquid:
 templates/page.about.liquid:
   development: 2017-11-05T13:47:31-06:00   d8115d12e0891f887a9b9b7b4a72ccf6
 templates/page.contact.liquid:
-  development: 2017-11-08T23:26:33-06:00   4cfc240cf1767697bf489e623d378aef
+  development: 2017-11-09T16:04:13-06:00   f34b9521e32468032bd212db2dabc333
 templates/page.faqs.liquid:
   development: 2017-11-05T13:47:31-06:00   597811d12bf42405334bfcc9e0169ca0
 templates/page.happenings.liquid:

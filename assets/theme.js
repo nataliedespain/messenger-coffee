@@ -1095,3 +1095,14 @@ $(document).ready(function() {
     document.documentElement.className = document.documentElement.className.replace('supports-no-cookies', 'supports-cookies');
   }
 });
+
+
+// Custom JS
+
+// Clear form on contact page
+$(document).ready(function() {
+  $('.form-container .form-box__input-group').val('');
+  $('#contact-page--clear').click(function() {
+    $('.form-container .form-box__input-group').val('');
+  })
+});

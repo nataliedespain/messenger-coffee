@@ -12,8 +12,12 @@
   <hr class="page--divider" />
   <div class="contact-page--info">
     <h4 class="product__title">
-      <span class="contact-page--address">1624 Grand Blvd KC MO 64108</span>
-      <span class="contact-page--phone">+1 816 345 6567</span>
+      <span class="contact-page--address">
+        <span class="icon-svg">{% include 'icon-location' %}</span> 1624 Grand Blvd KC MO 64108
+      </span>
+      <span class="contact-page--phone">
+        <span class="icon-svg">{% include 'icon-phone' %}</span> +1 816 345 6567
+      </span>
     </h4>
   </div>
 
@@ -76,7 +80,8 @@
       </div>
 
       <div class="contact-page--button">
-        <input type="submit" class="btn" value="{{ 'contact.form.send' | t }}">
+        <input type="submit" class="btn btn-dark" value="Submit">
+        <p id="contact-page--clear">clear form</p>
       </div>
 
     </div>

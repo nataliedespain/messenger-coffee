@@ -2925,12 +2925,31 @@ display: -webkit-box;
 		text-align: center;
 		font-family: "Gotham Medium";
 		letter-spacing: 1.3px;
+
+		@media screen and (max-width: $grid-small){
+			font-size: 13px;
+		}
 	}
+
 
 	.contact-page--address {
 		margin-right: 20px;
+
+		@media screen and (max-width: $grid-medium){
+			display: block;
+		}
+	}
+	
+	.icon-svg {
+		margin-top: 5px;
+		vertical-align: middle;
 	}
 
+	svg {
+		stroke: #999999;
+		height: 20px;
+		width: 20px;
+	}
 }
 
 .form-container {
@@ -2944,9 +2963,13 @@ display: -webkit-box;
 		width: 50%;
 		padding: 10px;
 
+		@media screen and (max-width: $grid-medium){
+			width: 100%;
+		}
+
 		.form-box__input-group {
 			width: 100%;
-			/*margin: 0;*/
+			min-width: 0;
 		}
 
 		.form-box__input-textbox {
@@ -2956,5 +2979,18 @@ display: -webkit-box;
 
 	.contact-page--button {
 		margin: 0 auto;
+
+		#contact-page--clear {
+			text-decoration: underline;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
 	}
+}
+
+.cart--container {
+	width: $grid-large;
+	margin: 0 auto;
 }
