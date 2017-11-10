@@ -8,8 +8,7 @@
     <h1 class="page-title__large">{{ 'customer.login.title' | t }}</h1>
   </div>
 
-  <div class="login--container">
-    <div id="CustomerLoginForm">
+    <div id="CustomerLoginForm" class="login--container">
       {% form 'customer_login' %}
 
         {{ form.errors | default_errors }}
@@ -58,7 +57,6 @@
 
           <div class="login--actions">
             <a href="/">{{ 'customer.login.cancel' | t }}</a>
-
           </div>
           {% endform %}
 
@@ -66,38 +64,40 @@
 
 
     </div>
-  </div>
+    <div id="RecoverPasswordForm" class="hide login--container">
+      <h4>{{ 'customer.recover_password.title' | t }}</h4>
+      <p>{{ 'customer.recover_password.subtext' | t }}</p>
 
-  <div id="RecoverPasswordForm" class="hide">
-    <h2>{{ 'customer.recover_password.title' | t }}</h2>
-    <p>{{ 'customer.recover_password.subtext' | t }}</p>
-
-    {% form 'recover_customer_password' %}
+      {% form 'recover_customer_password' %}
       {{ form.errors | default_errors }}
 
       {% if form.posted_successfully? %}
-        <span class="hide reset-password-success"></span>
+      <span class="hide reset-password-success"></span>
       {% endif %}
 
-      <label for="RecoverEmail" class="label-hidden">
-        {{ 'customer.recover_password.email' | t }}
-      </label>
-      <input type="email"
-             name="email"
-             id="RecoverEmail"
-             placeholder="{{ 'customer.recover_password.email' | t }}"
-             spellcheck="false"
-             autocomplete="off"
-             autocapitalize="off">
+      <div class="form-box">
+        <input type="email"
+              name="email"
+              id="RecoverEmail"
+              class="form-box__input-group"
+              placeholder="{{ 'customer.recover_password.email' | t }}"
+              spellcheck="false"
+              autocomplete="off"
+              autocapitalize="off">
+      </div>
 
-      <input type="submit" class="btn" value="{{ 'customer.recover_password.submit' | t }}">
+      <div class="login--reset-buttons">
+        <input type="submit" class="btn btn-dark" value="{{ 'customer.recover_password.submit' | t }}">
 
-      <button type="button" id="HideRecoverPasswordLink">
-        {{ 'customer.recover_password.cancel' | t }}
-      </button>
-    {% endform %}
+        <button type="button" id="HideRecoverPasswordLink" class="btn btn-dark">
+          {{ 'customer.recover_password.cancel' | t }}
+        </button>
+      </div>
 
-  </div>
+      {% endform %}
+
+    </div>
+
 
   {% if shop.checkout.guest_login %}
     <h2>{{ 'customer.login.guest_title' | t }}</h2>
