@@ -36,7 +36,7 @@ assets/instafeed.min.js:
 assets/theme.js:
   development: 2017-11-10T09:39:12-06:00   1771276ce5d900b0490b28de5aad5db7
 assets/theme.scss.liquid:
-  development: 2017-11-10T16:19:38-06:00   33eb3a13a4c94c4114dcabb2f6f78093
+  development: 2017-11-10T21:19:17-06:00   c9428d8b1b9730b48bfbc1e6883e0d80
 assets/vendor.js:
   development: 2017-11-05T13:47:29-06:00   b8e8dbe1aaf11c882d6d849a708113d1
 config/settings_data.json:
@@ -226,7 +226,7 @@ templates/cart.liquid:
 templates/collection.liquid:
   development: 2017-11-05T13:47:31-06:00   8c430fd39393e7fb7f9a1a7a585cc11b
 templates/customers/account.liquid:
-  development: 2017-11-05T13:47:31-06:00   4742bf0cc429943e699cbe9a0f528fa8
+  development: 2017-11-10T21:34:26-06:00   a9a51d570e00d9afd7fe8d6f6dfa5c0e
 templates/customers/activate_account.liquid:
   development: 2017-11-05T13:47:31-06:00   9df448bfebd9818755cc375260469e32
 templates/customers/addresses.liquid:
@@ -236,7 +236,7 @@ templates/customers/login.liquid:
 templates/customers/order.liquid:
   development: 2017-11-05T13:47:31-06:00   37f1c5cf66aa9eb9f7588988f536568d
 templates/customers/register.liquid:
-  development: 2017-11-05T13:47:31-06:00   5daf7cefee78a7ce0ce75aa59a64d4c3
+  development: 2017-11-10T19:41:00-06:00   6ee785114a7d212536519424bb5a6b5a
 templates/customers/reset_password.liquid:
   development: 2017-11-05T13:47:31-06:00   f6e5f6d66dacbb6fffd82fb1a6d29cd4
 templates/gift_card.liquid:

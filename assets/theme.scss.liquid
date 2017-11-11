@@ -2998,7 +2998,7 @@ display: -webkit-box;
 }
 
 
-/*================ Login Us Page ================*/
+/*================ Login Page ================*/
 .login--container {
 	background: #e8e8e8;
 	text-align: center;
@@ -3038,7 +3038,94 @@ display: -webkit-box;
 	}
 }
 
+/*================ Register Page ================*/
+.register--container {
+	background: #e8e8e8;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 200px;
+
+	a {
+		color: #999999;
+		font-family: "Gotham Medium";
+	}
+
+	.form-container {
+		margin-bottom: 0;
+	}
+
+	.form-container--flex {
+		display: flex;
+		flex-wrap: wrap;
+
+		.form-box {
+			width: 50%;
+
+			@media screen and (max-width: $grid-medium){
+				width: 100%;
+			}
+		}
+	}
+
+	.form-box__input-group {
+		@media screen and (max-width: $grid-small){
+			min-width: 100%;
+		}
+	}
+
+	.register--button {
+		margin: 0 auto;
+		width: 100%;
+		margin: 10px 0 20px 0;
+	}
+}
+
+.shopify-challenge__container {
+	margin-bottom: 200px;
+}
 
 
+/*================ Register Page ================*/
+.user-account--details {
+	background: #e8e8e8;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 50px;
 
+	.btn-smaller {
+		padding: 5px 10px;
+		margin: 5px 0;
+	}
 
+	.user-account--details-container {
+		margin: 0 auto;
+		max-width: $grid-large;
+	}
+
+	.user-account--title {
+		display: flex;
+		justify-content: space-between;
+
+		h2 {
+			margin: 5px 0;
+		}
+
+		p, a {
+			margin: 0;
+			color: black;
+			text-decoration: none;
+		}
+	}
+
+	.user-account--name {
+		margin-bottom: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		border-bottom: 1px #CCCCCC solid;
+		font-family: "Gotham Thin";
+
+		a {
+			margin: 17.5px 0 0 10px;
+		}
+	}
+}
