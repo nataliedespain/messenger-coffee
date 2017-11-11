@@ -983,7 +983,7 @@ theme.customerAddresses = (function() {
     var containerSelector = 'AddressProvinceContainer_' + formId;
 
     new Shopify.CountryProvinceSelector(countrySelector, provinceSelector, {
-      hideElement: containerSelector
+      // hideElement: containerSelector
     });
   });
 
