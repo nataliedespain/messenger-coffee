@@ -983,7 +983,7 @@ theme.customerAddresses = (function() {
     var containerSelector = 'AddressProvinceContainer_' + formId;
 
     new Shopify.CountryProvinceSelector(countrySelector, provinceSelector, {
-      // hideElement: containerSelector
+      hideElement: containerSelector
     });
   });
 
@@ -1101,7 +1101,7 @@ $(document).ready(function() {
 
 // Clear form on contact page
 $(document).ready(function() {
-  $('.form-container .form-box__input-group').val('');
+  $('.contact .form-container .form-box__input-group').val('');
   $('#contact-page--clear').click(function() {
     $('.form-container .form-box__input-group').val('');
   })
