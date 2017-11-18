@@ -20,11 +20,79 @@
 	</div>
 
 	<div class="wholesale--partner">
-		div class
     <img src="//cdn.shopify.com/s/files/1/0551/8953/files/wholesale-roaster.png?8317997063922462198" alt="Messenger Coffee Roaster" />
-    <div class="container">
+    <div class="wholesale--partner-text">
       <h3>We partner with <em>coffee shops</em>, <em>restaurants</em>, <em>churches</em>, <em>businesses</em>, <em>bakeries</em>, and more. We see our role as enabling business owners to serve their customers,<br> clients, or parishoners at the highest level possible, and we're with you every step of<br> the way.</h3>
     </div>
   </div>
+
+	<div class="wholesale--contact-form">
+		<div class="wholesale--contact-form-container">
+			<h2>Tell Us More</h2>
+			{% form 'contact' %}
+			{% if form.posted_successfully? %}
+			<div class="successForm feedback">
+				<p>Thanks for contacting us! We'll get back to you as soon as possible.</p>
+			</div>
+			{% endif %}
+
+			{% if form.errors %}
+			<div class="errorForm feedback">
+				<p>Oops, sorry. We were unable to submit your inquiry because it contained {{ form.errors | size | pluralize: 'an error', 'a few errors' }}. Please correct the following and submit again:</p>
+				{% for field in form.errors %}
+					<p>The {{ field | capitalize | replace: 'Body', 'Message' }} field {{ form.errors.messages[field] }}.</p>
+				{% endfor %}
+			</div>
+			{% endif %}
+
+			<div class="form-container" id="contactFormWrapper">
+				<div class="wholesale--form-left">
+					<div class="form-box">
+						<input class="form-box__input-group" type="text" id="contactFormName" name="contact[name]" placeholder="Name" />
+					</div>
+					<div class="form-box">
+						<input class="form-box__input-group" type="email" id="contactFormEmail" name="contact[email]" placeholder="Email" />
+					</div>
+					<div class="form-box">
+						<select name="contact[businessType]" class="form-box__input-group">
+							<option value="">Select business type</option>
+							<option value="Coffee Shop">Coffee Shop</option>
+							<option value="Restaurant">Restaurant</option>
+							<option value="Cafe">Cafe</option>
+							<option value="Church">Church</option>
+							<option value="Bakery">Bakery</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+				</div>
+				<div class="wholesale--form-right">
+					<div class="form-box">
+						<textarea class="form-box__input-group form-box__input-textbox" rows="12" cols="40" id="contactFormMessage" name="contact[body]" placeholder="Your Message"></textarea>
+					</div>
+				</div>
+			</div>
+			<input type="submit" id="contactFormSubmit" value="Send" class="btn btn-dark" />
+			{% endform %}
+		</div>
+	</div>
+
+	<div class="wholesale--bullets">
+		<div class="wholesale--bullets-container">
+			<h2 class="page-title">Partnering with messenger<br/>is more than our coffee</h2>
+			<div class="wholesale--bullets-left">
+				<ul>
+					<li>Coffee consulting and program help is freely offered. We're just a phone call, an email, or a text message away.</li>
+					<li>Carefully chosen single origin coffees and smartly crafted espresso blends.</li>
+					<li>Streamlined ordering system. Order your coffee online through our simple, well-designed wholesale portal, get it delivered to your store the same week. Easy as that.</li>
+				</ul>
+			</div>
+			<div class="wholesale--bullets-right">
+				<ul>
+					<li>Equipment and servicing. We have the ins and outs on everything from La Marzocco to Mahlköenig, and can help you acquire new equipment, or service the equipment you already have.</li>
+					<li>Coffee supplies, coffee supplies. All the goodies you need to run your coffee program, your way.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 </div>

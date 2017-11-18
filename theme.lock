@@ -36,7 +36,7 @@ assets/instafeed.min.js:
 assets/theme.js:
   development: 2017-11-15T22:11:33-06:00   b36cb372f5cbb16710855664afbe83e7
 assets/theme.scss.liquid:
-  development: 2017-11-17T19:40:49-06:00   dabbc322631f15e5d4bb70231f230591
+  development: 2017-11-18T12:39:20-06:00   13286a2f39548bac73d3c222c3db048f
 assets/vendor.js:
   development: 2017-11-05T13:47:29-06:00   b8e8dbe1aaf11c882d6d849a708113d1
 config/settings_data.json:
@@ -259,8 +259,10 @@ templates/page.menus.liquid:
   development: 2017-11-05T13:47:31-06:00   2ef66457fdc8635892216eb1142b576f
 templates/page.styles.liquid:
   development: 2017-11-05T13:47:31-06:00   9fb4c3208eda89312711db4cdc2773c7
+templates/page.subscriptions.liquid:
+  development: 2017-11-18T12:59:52-06:00   79388a86e2250c30ac7c65e51a70d5b8
 templates/page.wholesale.liquid:
-  development: 2017-11-17T19:47:32-06:00   b8a37bf40bfcf90de8d81e12e89568eb
+  development: 2017-11-18T12:37:38-06:00   cb645c8f7f6624586b0dcd2fb68873c1
 templates/password.liquid:
   development: 2017-11-05T13:47:31-06:00   73bba9f7f2437720e1e1fde57b544859
 templates/product.liquid:
