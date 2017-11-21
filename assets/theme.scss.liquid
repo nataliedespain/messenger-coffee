@@ -3592,7 +3592,48 @@ display: -webkit-box;
 	}
 }
 
+/*================ 404 Page ================*/
+.page-404 {
+	max-width: $grid-medium;
+	padding: 0 $gutter;
+	margin: 75px auto 150px auto;
 
+	.page-404--container {
+		max-width: 400px;
+		margin: 0 auto;
+		text-align: center;
+		position: relative;
+
+		img {
+			width: 100%;
+		}
+
+		.page-404--text {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 50%;
+			height: 50%;
+		}
+
+		hr {
+			border: 2px solid #CCCCCC;
+			width: 50px;
+		}
+
+		h1 {
+			@media screen and (max-width: $grid-small){
+				font-size: 1.5em;
+			}
+		}
+
+		h2 {
+			@media screen and (max-width: $grid-small){
+				font-size: 1em;
+			}
+		}
+	}
+}
 
 
 

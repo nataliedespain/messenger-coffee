@@ -35,6 +35,8 @@ assets/ico-select.svg.liquid:
   development: 2017-11-05T13:47:28-06:00   765be6d2ef08d76aa0f1aab48a10e2b7
 assets/instafeed.min.js:
   development: 2017-11-05T13:47:28-06:00   1b9d5439b41e462220f9e6937df15b60
+assets/pic404.png:
+  development: 2017-11-21T12:47:12-06:00   a7703717df06917ff132d283b4a13b74
 assets/roast-2_large.png:
   development: 2017-11-18T14:09:37-06:00   6db9e6b2757001b782493ea2f8398238
 assets/source-2_large.png:
@@ -44,7 +46,7 @@ assets/subs-arrow-bg.png:
 assets/theme.js:
   development: 2017-11-15T22:11:33-06:00   b36cb372f5cbb16710855664afbe83e7
 assets/theme.scss.liquid:
-  development: 2017-11-21T10:49:50-06:00   4e8e9b8ef2b609c3bb4edda6102138a2
+  development: 2017-11-21T12:59:45-06:00   79a8e3590e0099d5dc137e35d71a52eb
 assets/vendor.js:
   development: 2017-11-05T13:47:29-06:00   b8e8dbe1aaf11c882d6d849a708113d1
 config/settings_data.json:
@@ -222,7 +224,7 @@ snippets/social-meta-tags.liquid:
 snippets/social-sharing.liquid:
   development: 2017-11-05T13:47:30-06:00   987f1d283ac10d7849dc69d76221e37a
 templates/404.liquid:
-  development: 2017-11-05T13:47:30-06:00   a345bd048463d3bb245873ed26a41a98
+  development: 2017-11-21T12:57:54-06:00   1809f25e168cf3cfdeeb497316fd6dfd
 templates/article.happenings.liquid:
   development: 2017-11-05T13:47:31-06:00   3285ca2c39d1e25e868910ee9f4920c1
 templates/article.liquid:
