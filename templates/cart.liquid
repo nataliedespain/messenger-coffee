@@ -6,13 +6,14 @@
   <div class="cart--container">
 
     <form action="/cart" method="post" novalidate>
-      <table class="responsive-table">
+      <table class="responsive-table cart--table">
         <thead class="small--hide">
           <tr>
-            <th colspan="2">{{ 'cart.label.product' | t }}</th>
+            <th colspan="2"></th>
             <th>{{ 'cart.label.price' | t }}</th>
             <th>{{ 'cart.label.quantity' | t }}</th>
             <th>{{ 'cart.label.total' | t }}</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -45,7 +46,6 @@
                   <p>{{ item.variant.title }}</p>
                 {% endunless %}
 
-                <p>{{ item.vendor }}</p>
 
                 {%- assign property_size = item.properties | size -%}
 
@@ -64,9 +64,6 @@
                   {% endfor %}
                 {% endif %}
 
-                <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
-                  <small>{{ 'cart.general.remove' | t }}</small>
-                </a>
               </td>
               <td data-label="{{ 'cart.label.price' | t }}">
                 {% if item.original_line_price != item.line_price %}
@@ -88,6 +85,11 @@
               </td>
               <td data-label="{{ 'cart.label.total' | t }}">
                 {{ item.line_price | money }}
+              </td>
+              <td>
+                <a class="extra-padding" href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+                  <small>X</small>
+                </a>
               </td>
             </tr>
 

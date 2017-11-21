@@ -27,16 +27,24 @@ assets/arrow-down.png:
   development: 2017-11-05T13:47:28-06:00   073260e5909471f475fb917826f42ac1
 assets/cart.png:
   development: 2017-11-05T13:47:28-06:00   27a040d016603e526d9dcd1c646d3428
+assets/dispatch-2_large.png:
+  development: 2017-11-18T14:09:36-06:00   b9171225791d036ebaea15ca551aefc8
 assets/giftcard.js:
   development: 2017-11-05T13:47:28-06:00   b771bb1917067a40642c2d8e27cf877d
 assets/ico-select.svg.liquid:
   development: 2017-11-05T13:47:28-06:00   765be6d2ef08d76aa0f1aab48a10e2b7
 assets/instafeed.min.js:
   development: 2017-11-05T13:47:28-06:00   1b9d5439b41e462220f9e6937df15b60
+assets/roast-2_large.png:
+  development: 2017-11-18T14:09:37-06:00   6db9e6b2757001b782493ea2f8398238
+assets/source-2_large.png:
+  development: 2017-11-18T14:09:38-06:00   6f40539ef4169638991b1f594787c3a0
+assets/subs-arrow-bg.png:
+  development: 2017-11-18T14:09:37-06:00   520421552c7a55d8d6b2e8cc1c15be32
 assets/theme.js:
   development: 2017-11-15T22:11:33-06:00   b36cb372f5cbb16710855664afbe83e7
 assets/theme.scss.liquid:
-  development: 2017-11-18T12:39:20-06:00   13286a2f39548bac73d3c222c3db048f
+  development: 2017-11-20T17:49:05-06:00   e7ccc30b2215f6124a056e1155c754ef
 assets/vendor.js:
   development: 2017-11-05T13:47:29-06:00   b8e8dbe1aaf11c882d6d849a708113d1
 config/settings_data.json:
@@ -222,7 +230,7 @@ templates/article.liquid:
 templates/blog.liquid:
   development: 2017-11-05T13:47:31-06:00   d83cc3686f59028de70157c3babfbad1
 templates/cart.liquid:
-  development: 2017-11-10T09:45:46-06:00   88f34b11ff657a32a59f6de6730270b9
+  development: 2017-11-20T17:48:54-06:00   47d7fcd63dc873bd43d86139862c7695
 templates/collection.liquid:
   development: 2017-11-05T13:47:31-06:00   8c430fd39393e7fb7f9a1a7a585cc11b
 templates/customers/account.liquid:
@@ -260,7 +268,7 @@ templates/page.menus.liquid:
 templates/page.styles.liquid:
   development: 2017-11-05T13:47:31-06:00   9fb4c3208eda89312711db4cdc2773c7
 templates/page.subscriptions.liquid:
-  development: 2017-11-18T12:59:52-06:00   79388a86e2250c30ac7c65e51a70d5b8
+  development: 2017-11-18T15:49:42-06:00   581b8882e1bcf64a4f2fb4e05c64a8c4
 templates/page.wholesale.liquid:
   development: 2017-11-18T12:37:38-06:00   cb645c8f7f6624586b0dcd2fb68873c1
 templates/password.liquid:

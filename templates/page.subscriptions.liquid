@@ -1,12 +1,56 @@
-<div class="page-header with-border">
-	<div class="page-width">
-		<h1 class="page-title is-small">{{ page.title }}</h1>
+<div class="subscriptions">
+
+	<div class="subscriptions--page-hero">
+		<div class="subscriptions--page-herotext">
+			<h2 class="page-title">Dispatched Daily</h2>
+			<a class="btn btn-dark">Subscribe Today</a>
+		</div>
 	</div>
-</div>
 
-<div class="page-wrap">
-	<div class="page-width rte editor">
-	  {{ page.content }}
-	</div>	
-</div>
+	<div class="subscriptions--body">
+		<div class="subscriptions--how-it-works">
+			<h2 class="page-title">How it Works</h2>
+			<div class="subscriptions--imgs" style="background: url({{ 'subs-arrow-bg.png' | asset_img_url: '1000x' }}) no-repeat center center">
+				<div class="subscriptions--img">
+					<img src={{ 'source-2_large.png' | asset_img_url: '500x' }} />
+					<h4 class="page-title">Source</h4>
+					<p>We taste thousands of coffees per year, choose the ones we think are great, and bring them into our shop.</p>
+				</div>
+				<div class="subscriptions--img">
+					<img src={{ 'roast-2_large.png' | asset_img_url: '500x' }} />
+					<h4 class="page-title">Roast</h4>
+					<p>We roast coffees daily, with the aim of displaying the coffee farmer's hard work in the best way possible.</p>
+				</div>
+				<div class="subscriptions--img">
+					<img src={{ 'dispatch-2_large.png' | asset_img_url: '500x' }} />
+					<h4 class="page-title">Dispatch</h4>
+					<p>Shipped to your house just after roasting, we insure that the coffee will show up to your house in peak flavor.</p>
+				</div>
+			</div>
+		</div>
+		<div class="subscriptions--select">
+			<h2 class="page-title">Select and Subscribe</h2>
+			<div class="subscriptions--imgs">
+				<div class="subscriptions--img">
+					<img src={{ all_products['american-espresso'].images[0] | img_url: '500x' }} />
+					<h5 class="page-title">Espresso</h5>
+					<p>For the home barista, we present to you our carefully chosen coffees to pull the perfect shot with.</p>
+					<a href={{ all_products['american-espresso'].url | url }} class="btn btn-dark">Subscribe</a>
+				</div>
+				<div class="subscriptions--img">
+					<img src={{ all_products['roasters-choice'].images[0] | img_url: '500x' }} />
+					<h5 class="page-title">Roaster's Choice</h5>
+					<p>Our team selects the coffees we think you should try. Guaranteed delicious, and you'll never get bored.</p>
+					<a href={{ all_products['roasters-choice'].url | url }} class="btn btn-dark">Subscribe</a>
+				</div>
+				<div class="subscriptions--img">
+					<img src={{ all_products['messenger-silhouette'].images[0] | img_url: '500x' }} />
+					<h5 class="page-title">Blends</h5>
+					<p>Well-balanced, our blends are aimed to please everyone from grandma to that punk nephew.</p>
+					<a href={{ all_products['messenger-silhouette'].url | url }} class="btn btn-dark">Subscribe</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
+</div>
