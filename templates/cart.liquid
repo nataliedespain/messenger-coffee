@@ -78,6 +78,7 @@
               <td data-label="{{ 'cart.label.quantity' | t }}">
                 <input type="number"
                        name="updates[]"
+                       class="number-input"
                        id="updates_{{ item.key }}"
                        value="{{ item.quantity }}"
                        min="0"
@@ -96,20 +97,20 @@
           {% endfor %}
         </tbody>
       </table>
+      <p class="cart-subtotal">{{ 'cart.general.subtotal' | t }}: {{ cart.total_price | money }}</p>
 
       {% if settings.cart_notes_enable %}
-        <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
-        <textarea name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
+        <label class="cart--special-instructions-label" for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label><br />
+        <textarea class="cart--special-instructions" name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
       {% endif %}
 
-      <p>{{ 'cart.general.subtotal' | t }}</p>
-      <p>{{ cart.total_price | money }}</p>
       {% if cart.total_discounts > 0 %}
         <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
       {% endif %}
-      <p>{{ 'cart.general.shipping_at_checkout' | t }}</p>
-      <input type="submit" name="update" value="{{ 'cart.general.update' | t }}">
-      <input type="submit" name="checkout" class="btn" value="{{ 'cart.general.checkout' | t }}">
+      <div class="cart--buttons">
+        <input type="submit" name="update" class="btn btn-dark" value="{{ 'cart.general.update' | t }}">
+        <input type="submit" name="checkout" class="btn btn-dark" value="{{ 'cart.general.checkout' | t }}">
+      </div>
     </form>
   </div>
 {% else %}
@@ -120,9 +121,8 @@
   {% comment %}
   Cart empty state
   {% endcomment %}
-  <div class="supports-cookies">
+  <div class="supports-cookies cart--empty">
     <p>{{ 'cart.general.empty' | t }}</p>
-    <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
   </div>
 
   {% comment %}

@@ -3507,7 +3507,66 @@ display: -webkit-box;
 /*================ Cart Page ================*/
 .cart--container {
 	max-width: $grid-large;
+	padding: 0 $gutter;
 	margin: 0 auto;
+	margin-bottom: 150px;
+
+	input, textarea {
+		border-color: #CCCCCC;
+	}
+
+	.number-input  {
+		min-width: initial;
+	}
+
+	.cart-subtotal {
+		font-family: "Gotham Medium";
+		text-align: right;
+	}
+
+	.cart--special-instructions {
+		resize: none;
+		width: 300px;
+		
+		@media screen and (max-width: $grid-medium){
+			width: 200px;
+		}
+
+		@media screen and (max-width: $grid-small){
+			width: 100%;
+		}
+	}
+
+	.cart--special-instructions-label {
+		font-size: 13px;
+	}
+
+	.responsive-table-row {
+		border-bottom: 1px #CCCCCC solid;
+	}
+
+	.cart--buttons {
+		float: right;
+
+		@media screen and (max-width: $grid-small){
+			width: 100%;
+		}
+
+		input {
+			margin: 5px 0;
+
+			@media screen and (max-width: $grid-small){
+				width: 100%;
+			}
+		}
+	}
+}
+
+.cart--empty {
+	max-with: $grid-medium;
+	text-align: center;
+	font-size: 18px;
+	padding: 50px 0;
 }
 
 
