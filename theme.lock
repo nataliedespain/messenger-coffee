@@ -46,7 +46,7 @@ assets/subs-arrow-bg.png:
 assets/theme.js:
   development: 2017-11-15T22:11:33-06:00   b36cb372f5cbb16710855664afbe83e7
 assets/theme.scss.liquid:
-  development: 2017-11-21T12:59:45-06:00   79a8e3590e0099d5dc137e35d71a52eb
+  development: 2017-11-21T18:16:40-06:00   a9c88b040a2db7263cd84942a63a74ec
 assets/vendor.js:
   development: 2017-11-05T13:47:29-06:00   b8e8dbe1aaf11c882d6d849a708113d1
 config/settings_data.json:

@@ -3635,8 +3635,82 @@ display: -webkit-box;
 	}
 }
 
+/*================ Recharge Subsctiption Page ================*/
+.rc_layout {
 
+	a {
+		color: #999999;
+		font-family: "Gotham Medium"
+	}
+	
+	p {
+		font-size: 15px;
+		color: #999999;
+	}
 
+	thead tr th {
+		text-align: left;
+	}
+
+	.rc_layout__sidebar {
+		ul {
+			list-style-type: none;
+		}
+
+		li {
+			margin: 10px 0;
+		}
+	}
+
+	.rc_layout__content h2 {
+		font-family: "Gotham Thin";
+		font-weight: 100;
+		font-size: 28px;
+		text-transform: uppercase;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #CCCCCC;
+
+		@media screen and (max-width: $grid-medium){
+			margin-top: 15px !important;
+		}
+	}
+
+	.rc_table__container {
+		border-bottom: 1px solid #CCCCCC;
+	}
+
+	.re__schedule__order__address, .re__schedule__order__items {
+		padding: 5px 0 10px 0;
+
+		span {
+			color: #999999;
+
+			@media screen and (max-width: $grid-medium){
+				font-size: 15px;
+			}
+		}
+	}
+
+	.re__schedule__order__item__edit {
+		float: right;
+		margin-right: 10px;
+	}
+	
+	.re__subscriptions__subscriptions {
+		tbody tr {
+			color: #999999;
+			font-size: 15px;
+		}
+	}
+
+	hr {
+		border: .5px solid #CCCCCC;
+	}
+
+	.re__history__item__amount {
+		text-align: left;
+	}
+}
 
 
 
