@@ -46,7 +46,7 @@ assets/subs-arrow-bg.png:
 assets/theme.js:
   development: 2017-11-15T22:11:33-06:00   b36cb372f5cbb16710855664afbe83e7
 assets/theme.scss.liquid:
-  development: 2017-11-21T19:10:53-06:00   a52d68c0dab624030433fa43cc7c3d48
+  development: 2017-11-22T11:12:00-06:00   ee56327ffb286c56a3d9342c63234169
 assets/vendor.js:
   development: 2017-11-05T13:47:29-06:00   b8e8dbe1aaf11c882d6d849a708113d1
 config/settings_data.json:
@@ -86,7 +86,7 @@ sections/blog-template.liquid:
 sections/featured-collection.liquid:
   development: 2017-11-05T13:47:24-06:00   fdee2baf3b673ebd93af186139f74416
 sections/footer.liquid:
-  development: 2017-11-05T13:47:24-06:00   55ccc0e8f8da047f41c6ff9c7b5fb1ae
+  development: 2017-11-22T11:11:20-06:00   32368672e0c830be03286b554e843caf
 sections/header.liquid:
   development: 2017-11-05T13:47:24-06:00   887f1f8a538046f2fd62e595fe850702
 sections/home-divider.liquid:
