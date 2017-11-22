@@ -3127,7 +3127,13 @@ display: -webkit-box;
 
 	.form-container {
 		margin: 0 auto 20px 0;
-		min-width: $grid-large;
+		max-width: $grid-large;
+
+		.form-box__input-group {
+			@media screen and (max-width: $grid-small){
+				min-width: 100%;
+			}
+		}
 	}
 }
 
@@ -3167,6 +3173,53 @@ display: -webkit-box;
 
 		.address-template--group {
 			margin: 10px 0;
+		}
+	}
+}
+
+.user-account--orders {
+	width: 100%;
+	margin-bottom: 150px;
+}
+
+.user-account--orders-container {
+	max-width: $grid-large;
+	margin: 0 auto;
+	padding: 20px 0;
+
+	h2.orders-text {
+		font-family: "Gotham Thin";
+	}
+
+	hr {
+		border: 2px solid #E5E5E5;
+	}
+
+	.orders--table-container {
+		max-width: 100%;
+
+		.responsive-table {
+			width: 100%;
+			border-collapse: collapse;
+
+			th {
+				text-align: left;
+				padding: 10px 5px;
+				border-bottom: 2px solid #E5E5E5;
+				color: #999999;
+				font-weight: 100;
+				text-transform: uppercase;
+
+			}
+
+			td {
+				padding: 15px 5px;
+			}
+
+			a {
+				color: #999999;
+				font-weight: bold;
+			}
 		}
 	}
 }
@@ -3637,6 +3690,7 @@ display: -webkit-box;
 
 /*================ Recharge Subsctiption Page ================*/
 .rc_layout {
+	margin-bottom: 150px;
 
 	a {
 		color: #999999;

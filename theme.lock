@@ -46,7 +46,7 @@ assets/subs-arrow-bg.png:
 assets/theme.js:
   development: 2017-11-15T22:11:33-06:00   b36cb372f5cbb16710855664afbe83e7
 assets/theme.scss.liquid:
-  development: 2017-11-21T18:16:40-06:00   a9c88b040a2db7263cd84942a63a74ec
+  development: 2017-11-21T19:10:53-06:00   a52d68c0dab624030433fa43cc7c3d48
 assets/vendor.js:
   development: 2017-11-05T13:47:29-06:00   b8e8dbe1aaf11c882d6d849a708113d1
 config/settings_data.json:
@@ -236,7 +236,7 @@ templates/cart.liquid:
 templates/collection.liquid:
   development: 2017-11-05T13:47:31-06:00   8c430fd39393e7fb7f9a1a7a585cc11b
 templates/customers/account.liquid:
-  development: 2017-11-15T22:21:04-06:00   b6bcb3744bd5ce513a00c2219c2e51d8
+  development: 2017-11-21T19:00:28-06:00   5c1976273ac7437ac2b59f0c9329a2f6
 templates/customers/activate_account.liquid:
   development: 2017-11-05T13:47:31-06:00   9df448bfebd9818755cc375260469e32
 templates/customers/addresses.liquid:
